@@ -1128,26 +1128,27 @@
     font-size: 13px;
   }
 
-  .bottom-sheet {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 300px;
-    background-color: #1e1e1e;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    color: #fff;
-    padding: 15px;
-    width: 100%;
-  }
+ .bottom-sheet {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 300px;
+      background-color: #1e1e1e;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      will-change: transform;
+      color: #fff;
+      padding: 15px;
+      width: 100%;
+    }
 
-  .bottom-sheet.show {
-    transform: translateY(0);
-  }
+    .bottom-sheet.active {
+      transform: translateY(0%);
+    }
 
   .drag-bar {
     width: 50px;
