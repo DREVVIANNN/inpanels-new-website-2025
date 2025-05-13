@@ -235,65 +235,12 @@ document.getElementById('shareButtonWhatsApp3').addEventListener('click', functi
 });
 
 
-    const sheet = document.getElementById('bottomSheet');
-    let startY = 0;
-    let currentY = 0;
-    let isDragging = false;
-    let isTouch = false;
+const sheet = document.getElementById('bottomSheet');
 
-    function openSheet() {
-      // Remove inline transform to allow CSS class to work
-      sheet.style.transition = 'transform 0.3s ease';
-      sheet.style.transform = '';
-      sheet.classList.add('active');
-    }
+function openSheet() {
+  sheet.classList.add('active');
+}
 
-    function closeSheet() {
-      sheet.classList.remove('active');
-      sheet.style.transform = 'translateY(100%)';
-      // Wait for the transition to finish, then clean up inline style
-      setTimeout(() => {
-        if (!sheet.classList.contains('active')) {
-          sheet.style.transform = '';
-        }
-      }, 300);
-    }
-
-    function dragStart(e) {
-      isTouch = e.type === 'touchstart';
-      startY = isTouch ? e.touches[0].clientY : e.clientY;
-      isDragging = true;
-      sheet.style.transition = 'none';
-    }
-
-    function dragMove(e) {
-      if (!isDragging) return;
-      currentY = isTouch ? e.touches[0].clientY : e.clientY;
-      const deltaY = currentY - startY;
-      if (deltaY > 0) {
-        sheet.style.transform = `translateY(${deltaY}px)`;
-      }
-    }
-
-    function dragEnd() {
-      if (!isDragging) return;
-      const deltaY = currentY - startY;
-      isDragging = false;
-      sheet.style.transition = 'transform 0.3s ease';
-
-      if (deltaY > 100) {
-        closeSheet();
-      } else {
-        sheet.style.transform = 'translateY(0%)';
-      }
-    }
-
-    // Touch
-    sheet.addEventListener('touchstart', dragStart);
-    sheet.addEventListener('touchmove', dragMove);
-    sheet.addEventListener('touchend', dragEnd);
-
-    // Mouse
-    sheet.addEventListener('mousedown', dragStart);
-    window.addEventListener('mousemove', dragMove);
-    window.addEventListener('mouseup', dragEnd);
+function closeSheet() {
+  sheet.classList.remove('active');
+}
