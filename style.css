@@ -1196,6 +1196,11 @@
     font-size: 15px;
     text-align: center;
   }
+  
+  .link-posted{
+    color: #00aaff;
+    text-decoration: underline;
+  }
 
   @media (max-width: 460px) {
     .search-bar{
@@ -1316,7 +1321,7 @@
     }
 
     .bottom-sheet{
-      height: 335px;
+      height: 300px;
     }
   }
 

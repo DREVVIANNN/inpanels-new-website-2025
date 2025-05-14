@@ -202,17 +202,22 @@ document.addEventListener('DOMContentLoaded', function () {
 // Define the messages and URLs to be shared
 const shareData1 = {
     message: 'Official InPanels Website/Post 1',
-    url: 'https://www.aero-ps.site/our-post-pageH62hHdGdt7g32gdg987g32gdg2FFDth298-dh829&h92@9yd8ge.html'
+    url: 'https://www.inpanels.site'
 };
 
 const shareData2 = {
     message: 'Official InPanels Website/Post 2',
-    url: 'https://www.aero-ps.site/our-post-pageH62hHdGdt7g32gdg987g32gdg2FFDth298-dh829&h92@9yd8ge.html'
+    url: 'https://www.inpanels.site'
 };
 
 const shareData3 = {
     message: 'Official InPanels Website/Post 3',
-    url: 'https://www.aero-ps.site/our-post-pageH62hHdGdt7g32gdg987g32gdg2FFDth298-dh829&h92@9yd8ge.html'
+    url: 'https://www.inpanels.site'
+};
+
+const shareData4 = {
+    message: 'Official InPanels Website/Post 4',
+    url: 'https://www.inpanels.site'
 };
 
 // Function to share on WhatsApp
@@ -232,6 +237,10 @@ document.getElementById('shareButtonWhatsApp2').addEventListener('click', functi
 
 document.getElementById('shareButtonWhatsApp3').addEventListener('click', function() {
     shareToWhatsApp(shareData3.message, shareData3.url);
+});
+
+document.getElementById('shareButtonWhatsApp4').addEventListener('click', function() {
+    shareToWhatsApp(shareData4.message, shareData4.url);
 });
 
 
