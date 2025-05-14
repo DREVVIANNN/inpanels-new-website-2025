@@ -1133,7 +1133,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 300px;
+    height: 220px;
     background-color: #1e1e1e;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -1196,10 +1196,20 @@
     font-size: 15px;
     text-align: center;
   }
-  
+
   .link-posted{
-    color: #00aaff;
     text-decoration: underline;
+    color: #00aaff;
+  }
+
+  .button-page{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    border-radius: 50px;
+    width: max-content;
+    box-shadow: 0px 4px 8px #e6e6e6;
+    cursor: pointer;
   }
 
   @media (max-width: 460px) {
@@ -1379,6 +1389,7 @@
     .bottom-sheet{
       width: 620px;
       justify-self: center;
+      height: 220px;
     }
   }
 
