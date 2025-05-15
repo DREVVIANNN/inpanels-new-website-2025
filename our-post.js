@@ -145,6 +145,11 @@ const shareData4 = {
     url: 'https://www.inpanels.site'
 };
 
+const shareData5 = {
+    message: 'Official InPanels Website/Post 5',
+    url: 'https://www.inpanels.site'
+};
+
 // Function to share on WhatsApp
 function shareToWhatsApp(message, url) {
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}%20${encodeURIComponent(url)}`;
@@ -165,7 +170,11 @@ document.getElementById('shareButtonWhatsApp3').addEventListener('click', functi
 });
 
 document.getElementById('shareButtonWhatsApp4').addEventListener('click', function() {
-    shareToWhatsApp(shareData3.message, shareData3.url);
+    shareToWhatsApp(shareData4.message, shareData4.url);
+});
+
+document.getElementById('shareButtonWhatsApp5').addEventListener('click', function() {
+    shareToWhatsApp(shareData5.message, shareData5.url);
 });
 
 
