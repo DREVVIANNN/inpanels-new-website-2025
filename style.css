@@ -43,7 +43,9 @@
   .search-bar {
     padding: 5px 10px;
     border-radius: 20px;
-    width: 150px;
+    width: 200px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border: 1px solid #ccc;
   }
   
@@ -1123,7 +1125,6 @@
   .profile-user-container img{
     border-radius: 50%;
     width: 20px;
-    border: 1px solid black;
   }
 
   .counter{
@@ -1231,11 +1232,22 @@
     margin-bottom: 0.5rem;
   }
 
+  .footer-btn-container{
+    justify-self: center;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+
   .inpanels-home-logo{
     width: 50px;
     border-radius: 50%;
     border: 1px #ccc solid;
     transition: 0.4s;
+  }
+  .inpanels-footer-logo{
+    width: 200px;
   }
 
   .inpanels-home-logo:hover{
@@ -1282,10 +1294,16 @@
     text-decoration: underline;
   }
 
-  @media (max-width: 500px) {
-    .search-bar{
-        width: 100px;
-    }
+  .penghalang-antar-rekomendasi{
+    height: 2px;
+    background-color: #333;
+    width: 100px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50px;
+  }
+
+  @media (max-width: 460px) {
 
     .faq-title{
       text-align: center;
@@ -1295,10 +1313,6 @@
 
     .chat-popup{
       width: 280px;
-    }
-
-    .ri-search-line{
-      display: none;
     }
 
     .faq-container{
@@ -1411,6 +1425,10 @@
     .bottom-sheet{
       height: 230px;
     }
+
+    .collab-title{
+      font-size: 18px;
+    }
   }
 
   @media (min-width: 1100px) {
@@ -1465,7 +1483,7 @@
     }
 
     .info-container{
-      width: 1000px;
+      width: 1050px;
     }
 
     .bottom-sheet{
@@ -1490,7 +1508,10 @@
     }
 
     .info-container{
-      width: 380px;
+      width: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 5px;
     }
   }
 
