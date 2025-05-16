@@ -20,38 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
       sideMenu.classList.remove('active');
     };
 
-    const searchInput = document.getElementById('search-input');
-    const paragraphs = document.querySelectorAll('.content p');
-    
-    searchInput.addEventListener('input', function() {
-      const query = searchInput.value.trim().toLowerCase();
-    
-      // Remove all previous highlights
-      paragraphs.forEach(p => {
-        p.innerHTML = p.textContent;
-      });
-    
-      if (query === '') {
-        return; // If input is empty, do nothing more
-      }
-    
-      let found = false;
-    
-      paragraphs.forEach(p => {
-        const text = p.textContent.toLowerCase();
-        if (!found && text.includes(query)) {
-          // Highlight only the first match
-          const regex = new RegExp(`(${query})`, 'gi');
-          p.innerHTML = p.textContent.replace(regex, '<span class="highlight">$1</span>');
-    
-          // Scroll smoothly to the element
-          p.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    
-          found = true;
-        }
-      });
-    });
-
     const firebaseConfig = {
       apiKey: "AIzaSyBY54WfX5xhYzlmOjDPDWhDn1vl3FH3u50",
       authDomain: "inpanels-game.firebaseapp.com",
