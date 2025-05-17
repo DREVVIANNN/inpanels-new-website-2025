@@ -91,6 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function onDevelopment() {
     alert("disabled for a while...")
   }
+  function comingSoon() {
+    alert("Upcoming Collaboration May 2025.")
+  }
 
 // Define the messages and URLs to be shared
 const shareData1 = {
@@ -155,3 +158,50 @@ function openSheet() {
 function closeSheet() {
   sheet.classList.remove('active');
 }
+
+const scrollWrapper = document.getElementById("drag-scroll");
+
+    let isDown = false;
+    let startY;
+    let scrollTop;
+
+    scrollWrapper.addEventListener("mousedown", (e) => {
+      isDown = true;
+      scrollWrapper.classList.add("active");
+      startY = e.pageY - scrollWrapper.offsetTop;
+      scrollTop = scrollWrapper.scrollTop;
+    });
+
+    scrollWrapper.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+
+    scrollWrapper.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+
+    scrollWrapper.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const y = e.pageY - scrollWrapper.offsetTop;
+      const walk = (y - startY) * 1.5; // Scroll speed
+      scrollWrapper.scrollTop = scrollTop - walk;
+    });
+
+    // Touch support
+    scrollWrapper.addEventListener("touchstart", (e) => {
+      isDown = true;
+      startY = e.touches[0].clientY;
+      scrollTop = scrollWrapper.scrollTop;
+    });
+
+    scrollWrapper.addEventListener("touchend", () => {
+      isDown = false;
+    });
+
+    scrollWrapper.addEventListener("touchmove", (e) => {
+      if (!isDown) return;
+      const y = e.touches[0].clientY;
+      const walk = (y - startY) * 1.5;
+      scrollWrapper.scrollTop = scrollTop - walk;
+    });

@@ -1074,6 +1074,7 @@
     display: grid;
     justify-self: center;
     border-radius: 10px;
+    z-index: 0;
   }
 
   .image-post{
@@ -1338,6 +1339,126 @@
     background-color: #e0e0e0;
   }
 
+  .search-btn{
+    background-color: white;
+    padding: 5px;
+    border: 1px #ccc solid;
+    border-radius: 50px;
+    font-size: 12px;
+  }
+
+  .article-container {
+    max-width: 800px;
+    border-radius: 16px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .article-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .article-container .meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+
+  .article-container img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+  }
+
+  .article-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .scroll-banner {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-radius: 16px;
+  }
+
+  .scroll-banner::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .scroll-banner::-webkit-scrollbar-thumb {
+    background-color: #00aaff;
+    border-radius: 10px;
+  }
+
+  .scroll-wrapper {
+    overflow: hidden; /* Hide normal scroll */
+    cursor: grab;
+  }
+
+  .scroll-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .banner-item {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 100px;
+    background-color: #e8f0ff;
+    border-radius: 12px;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s ease;
+  }
+
+  .banner-item:hover {
+    transform: scale(1.03);
+  }
+
+  .banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .banner-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    user-select: none;
+  }
+
+  .sakura-image {
+    position: absolute;
+    right: 0;
+    top: 9%;
+    transform: translateY(-50%);
+    width: 300px; /* adjust image size */
+    opacity: 10;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  blockquote {
+    border-left: 4px solid #3f83f8;
+    padding-left: 16px;
+    color: #555;
+    margin: 20px 0;
+    font-style: italic;
+  }
+
   @media (max-width: 460px) {
 
     .faq-title{
@@ -1519,6 +1640,10 @@
 
     .info-container{
       width: 1050px;
+    }
+
+    .sakura-image{
+      right: 35rem;
     }
 
     .bottom-sheet{
