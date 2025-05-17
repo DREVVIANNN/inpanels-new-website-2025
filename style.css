@@ -1445,7 +1445,7 @@
   .sakura-image {
     position: absolute;
     right: 0;
-    top: 9%;
+    top: 6%;
     transform: translateY(-50%);
     width: 300px; /* adjust image size */
     opacity: 10;
@@ -1586,6 +1586,10 @@
 
     .collab-title{
       font-size: 18px;
+    }
+
+    .sakura-image{
+      top: 5%;
     }
   }
 
