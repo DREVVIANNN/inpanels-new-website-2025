@@ -169,6 +169,28 @@
     text-align: center;
   }
 
+  .home-title-athena{
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #00aaff, #e00096, #00aaff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
   p {
     letter-spacing: 1px;
     margin-bottom: 0.2rem;
@@ -1453,6 +1475,116 @@
     pointer-events: none;
   }
 
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out both;
+  }
+  .animate-fade-in.delay-100 {
+    animation-delay: 0.1s;
+  }
+  .animate-fade-in.delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animate-fade-in.delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes entrance3d {
+    0% {
+      transform: scale(0.8) rotateX(20deg) rotateY(20deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05) rotateX(-10deg) rotateY(-5deg);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) rotateX(0) rotateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes logoFlipInOut {
+    0% {
+      opacity: 0;
+      transform: rotateY(90deg) scale(0.8);
+    }
+    30% {
+      opacity: 1;
+      transform: rotateY(0deg) scale(1.05);
+    }
+    60% {
+      transform: rotateY(0deg) scale(1);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotateY(-90deg) scale(0.9);
+    }
+  }
+  
+  @keyframes textFadeIn {
+    0%, 75% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-logo-flip-in-out {
+    animation: logoFlipInOut 3s ease forwards;
+  }
+  
+  .animate-text-in {
+    animation: textFadeIn 1.8s ease forwards;
+    animation-delay: 3s;
+  }
+
+  
+  /* Optional: Custom loader style */
+.loader-animation {
+  animation: pulse-scale 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes logoBounce {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(3deg);
+  }
+}
+
+.animate-logo-bounce {
+  animation: logoBounce 1.5s ease-in-out infinite;
+}
+
+  
+
   blockquote {
     border-left: 4px solid #3f83f8;
     padding-left: 16px;
@@ -1564,7 +1696,8 @@
       width: 350px;
     }
 
-    .home-title-2{
+    .home-title-2,
+    .home-title-athena{
       font-size: 25px;
     }
 

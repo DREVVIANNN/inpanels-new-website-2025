@@ -205,3 +205,17 @@ const scrollWrapper = document.getElementById("drag-scroll");
       const walk = (y - startY) * 1.5;
       scrollWrapper.scrollTop = scrollTop - walk;
     });
+    
+    window.addEventListener('load', function () {
+      const preloader = document.getElementById('preloader');
+      const content = document.getElementById('site-content');
+  
+      // Trigger fade out
+      preloader.classList.add('opacity-0');
+  
+      // Remove after transition
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        content.classList.remove('opacity-0');
+      }, 800); // match transition-duration
+    });
