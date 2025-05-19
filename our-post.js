@@ -206,16 +206,24 @@ const scrollWrapper = document.getElementById("drag-scroll");
       scrollWrapper.scrollTop = scrollTop - walk;
     });
     
-    window.addEventListener('load', function () {
-      const preloader = document.getElementById('preloader');
-      const content = document.getElementById('site-content');
+    const preloader = document.getElementById('preloader');
+    const siteContent = document.getElementById('site-content');
   
-      // Trigger fade out
+    function hidePreloader() {
       preloader.classList.add('opacity-0');
-  
-      // Remove after transition
       setTimeout(() => {
         preloader.style.display = 'none';
-        content.classList.remove('opacity-0');
-      }, 800); // match transition-duration
+        siteContent.classList.remove('opacity-0');
+      }, 700); // match transition
+    }
+  
+    // Dismiss on load (auto)
+    window.addEventListener('load', () => {
+      // Auto dismiss in 4.5 seconds
+      setTimeout(() => {
+        hidePreloader();
+      }, 4500);
     });
+  
+    // Dismiss on user click
+    preloader.addEventListener('click', hidePreloader);

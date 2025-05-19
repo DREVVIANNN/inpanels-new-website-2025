@@ -1553,36 +1553,93 @@
     animation-delay: 3s;
   }
 
+  @keyframes gradientBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   
-  /* Optional: Custom loader style */
-.loader-animation {
-  animation: pulse-scale 1.2s infinite ease-in-out;
-}
-
-@keyframes pulse-scale {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.8;
+  .animate-gradient-border {
+    background-size: 200% 200%;
+    animation: gradientBorder 4s ease infinite;
   }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-}
-
-@keyframes logoBounce {
-  0%, 100% {
-    transform: scale(1) rotate(0deg);
+  
+  .animate-fade-in {
+    animation: fadeInUp 1s ease-out both;
   }
-  50% {
-    transform: scale(1.15) rotate(3deg);
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
-}
+  
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+  }
+  
 
-.animate-logo-bounce {
-  animation: logoBounce 1.5s ease-in-out infinite;
-}
+  @keyframes gradientBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .animate-border-gradient {
+    background-size: 200% 200%;
+    animation: gradientBorder 3s ease infinite;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
+  }
+  
+  .animate-gradient-flow {
+    background-size: 100% 200%;
+    animation: gradientFlow 2s linear infinite;
+  }
+  
+  @keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradientText 5s ease infinite;
+  }
 
+  @keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradientText 5s ease infinite;
+  }
+  
+  
   
 
   blockquote {
