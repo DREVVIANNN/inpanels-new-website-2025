@@ -227,3 +227,18 @@ const scrollWrapper = document.getElementById("drag-scroll");
   
     // Dismiss on user click
     preloader.addEventListener('click', hidePreloader);
+
+      // Toggle menu logic
+  const toggleBtn = document.getElementById('demoToggle');
+  const menu = document.getElementById('demoMenu');
+
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Optional: Hide menu when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!toggleBtn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
