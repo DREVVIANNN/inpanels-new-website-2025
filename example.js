@@ -78,3 +78,4 @@ const fadeIn = (id) => {
   function closePopup() {
     document.getElementById('popup').style.display = 'none';
   }
+
