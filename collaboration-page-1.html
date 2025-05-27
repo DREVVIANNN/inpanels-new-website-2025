@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InPanels Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="shortcut icon" href="assets/img/a82ghh8et7g2gdaf9990juekl20jeobn.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8114226943532527"
+     crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+        <!-- 🔄 Loading Screen -->
+    <div id="loader" class="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-1000 opacity-100">
+        <img src="your-loader.gif" alt="Loading..." class="w-24 h-24 animate-pulse">
+    </div>
+    
+    
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-gray-50 flex items-center justify-between p-3 max-w-7xl mx-auto">
+      <div class="text-xl font-bold">InPanels.Dev</div>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#" class="hover:text-blue-600">Collaboration</a>
+        <a href="#" class="hover:text-blue-600">Article</a>
+        <a href="#" class="hover:text-blue-600">What's New?</a>
+        <a href="#" class="hover:text-blue-600">Summer Info</a>
+      </nav>
+    
+      <div class="flex gap-4 items-center relative">
+        <!-- Demo Menu Toggle Button -->
+        <button id="demoToggle" class="text-sm px-4 py-2 border rounded-md hover:bg-gray-100 focus:outline-none">
+          Menu
+        </button>
+    
+        <!-- Dropdown Menu -->
+        <div id="demoMenu" class="absolute right-0 top-14 bg-white border rounded-md shadow-md w-48 hidden z-50">
+          <a href="https://www.inpanels.site" class="block px-4 py-3 hover:bg-gray-100 text-sm">Home</a>
+          <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm">Collaboration</a>
+          <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm">Article</a>
+          <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm">Summer Info</a>
+          <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm">What's New?</a>
+          <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm">Privacy & Policy</a>
+          <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm">Disclaimer</a>
+        </div>
+    
+        <!-- Language selector -->
+        <select class="text-sm border rounded-md px-2 py-1">
+          <option>English</option>
+        </select>
+      </div>
+    </header>
+  
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate__animated animate__fadeInLeft">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Athena Family</h1>
+        <p class="text-lg text-gray-600 mb-6">Welcome to ATHENA Family, Athena its a group community that build like a family, in here you will got so many friend between you and the head staff, also in this community not a toxic user availble.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <button onclick="document.getElementById('demoModal').classList.remove('hidden')" 
+            class="px-6 py-3 bg-red-600 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-red-700 transition">
+            Join Group
+            </button>
+            <a href="#learn-more" class="px-6 py-3 bg-gray-200 text-center text-gray-800 text-sm font-semibold rounded-lg shadow-md hover:bg-gray-300 transition">
+            What's New?
+            </a>
+        </div>
+  
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-6 mt-10">
+          <div>
+            <h3 class="text-2xl font-bold">6/2025</h3>
+            <p class="text-sm text-gray-500">Countdown Summerfest</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold">~0/175K</h3>
+            <p class="text-sm text-gray-500">Accumulated Funds</p>
+          </div>
+          <div class="col-span-2 flex items-center mt-4">
+            <div class="text-yellow-500 text-lg">★★★★★</div>
+            <span class="text-sm ml-2 text-gray-500">5 Average user rating</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Hero Image/Illustration -->
+      <div class="animate__animated animate__fadeInRight">
+        <img src="assets/img/images.steamusercontent-removebg-preview.png" alt="InPanels Summer Edition" class="w-full max-w-md mx-auto">
+      </div>
+    </section>      
+    
+
+    <!-- About Us Section -->
+    <section class="mb-20 px-6 md:px-12" id="about">
+        <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-red-600 opacity-0 translate-y-6 transition-all duration-1000 ease-out" id="aboutHeading">
+            About Us
+        </h2>
+        <p class="mt-4 text-gray-700 text-base md:text-lg leading-relaxed opacity-0 translate-y-6 transition-all duration-1000 ease-out delay-100" id="aboutText">
+            At InPanels Development, we help companies build better workplaces by combining smart design and people-focused technology. Our mission is to make HR not just efficient, but meaningful — creating tools that support culture, collaboration, and growth.
+        </p>
+    
+        <div class="mt-10 grid md:grid-cols-2 gap-12">
+            <div class="opacity-0 translate-y-6 transition-all duration-1000 ease-out delay-200" id="aboutLeft">
+            <h3 class="text-xl font-semibold text-red-500 mb-3">Our Focus</h3>
+            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li>Be success at job</li>
+                <li>Being good person.</li>
+                <li>Always smile.</li>
+                <li>Make customer always happy.</li>
+            </ul>
+            </div>
+            <div class="opacity-0 translate-y-6 transition-all duration-1000 ease-out delay-300" id="aboutRight">
+            <h3 class="text-xl font-semibold text-red-500 mb-3">Why It Matters</h3>
+            <p class="text-gray-700 leading-relaxed">
+                Happy teams build great companies. We believe HR tools should enable meaningful work, not just manage people. That’s why we build tech that’s fast, flexible, and easy to use — so your people can focus on what matters most.
+            </p>
+            </div>
+        </div>
+        </div>
+    </section>
+  
+
+
+  <section id="contact" class="bg-gray-50 py-20 px-4 md:px-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Text Content -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-red-700 animate-fade-in-up">Contact Us</h2>
+        <p class="text-gray-600 text-md animate-fade-in-up">We're here to answer your questions and help you. Drop us a message and we'll get back to you as soon as we can!</p>
+        <img src="assets/img/quality_restoration_20250521172234230.png" alt="Contact" class="rounded-xl w-full max-w-sm animate-fade-in-up">
+      </div>
+  
+      <!-- Contact Form -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="bg-white shadow-xl rounded-2xl p-8 space-y-6 animate-fade-in-up">
+        <input type="hidden" name="access_key" value="e722d3ae-0c77-4eae-aa19-3618e9f38bc5" />
+
+        <input type="hidden" name="redirect" value="https://inpanels.site/thank-you.html">
+
+        <div>
+            <label for="name" class="text-sm font-semibold text-gray-700 block mb-1">Your Name</label>
+            <input id="name" name="name" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          </div>
+          <div>
+            <label for="email" class="text-sm font-semibold text-gray-700 block mb-1">Your Email</label>
+            <input id="email" name="email" type="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          </div>
+          <div>
+            <label for="message" class="text-sm font-semibold text-gray-700 block mb-1">Your Message</label>
+            <textarea id="message" name="message" rows="4" class="resize-none w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+          </div>
+        <button type="submit" class="w-full bg-red-600 text-white py-2 px-6 rounded-lg hover:bg-red-700 transition duration-300 shadow-md">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+  
+  
+    
+  
+    <!-- Responsive Event Banner -->
+    <div id="eventBanner" class="fixed bottom-0 w-full bg-white border-t shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 relative text-xs text-gray-800 sm:flex sm:items-center sm:justify-between">
+    
+        <!-- X Button -->
+        <button onclick="document.getElementById('eventBanner').remove()" 
+                class="absolute top-2 right-3 sm:static sm:order-2 sm:ml-4 text-gray-500 hover:text-gray-700 text-base sm:text-sm">
+            ✕
+        </button>
+    
+        <!-- Text -->
+        <span class="block pr-8 sm:pr-0 sm:order-1 text-center sm:text-left leading-snug">
+            <i style="color: rgb(255, 208, 0);" class="ri-sun-fill"></i> Upcoming Summer Event with InPanels Development Team! Learn more in our 
+            <a href="#" class="underline text-blue-600 hover:text-blue-700">Summer Event Info</a>.
+        </span>
+    
+        </div>
+    </div>
+  
+    
+
+      <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+    <script src="example.js"></script>
+</body>
+</html>
