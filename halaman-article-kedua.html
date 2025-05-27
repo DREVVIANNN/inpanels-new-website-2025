@@ -15,6 +15,17 @@
      <script async src="https://www.tiktok.com/embed.js"></script>
 </head>
 <body class="bg-gray-900 text-gray-800">
+
+    <div id="popup" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+        <div class="relative bg-gray-800 rounded-xl p-6 w-10/12 max-w-md shadow-lg animate-fade-in">
+          <button onclick="closePopup()" class="absolute top-3 right-3 text-gray-300 hover:text-red-500 text-2xl font-bold p-1">
+            &times;
+          </button>
+
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahE42C4ssogKCwMD_QHOF6kLXctX2ZkhdSA&s" alt="Popup Image" class="rounded-md justify-self-center w-[350px] h-auto">
+        </div>
+      </div>
+    
     
     
       <!-- Navigation -->
@@ -31,7 +42,7 @@
 
     <!-- Author -->
     <div class="flex items-center space-x-4 mt-6">
-        <div class="relative w-14 h-14 rounded-full p-1 bg-gradient-to-r from-red-900 to-red-700 animate-border-spin shadow-xl hover:scale-105 transition-transform duration-500 ease-in-out">
+        <div class="relative w-14 h-14 rounded-full p-1 bg-gradient-to-r from-yellow-400 to-yellow-600 animate-border-spin shadow-xl hover:scale-105 transition-transform duration-500 ease-in-out">
             <div class="w-full h-full bg-[#1e293b] rounded-full flex items-center justify-center overflow-hidden">
               <img src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/4ebb9192d02fc162fc5d9f14718367db.jpeg?lk3s=1a13ec60&nonce=84303&refresh_token=9d09e9ecd5be3c933aac7e477b926afa&x-expires=1748412000&x-signature=HB5cxEd%2BgGrImbFrGaBguFEYBDI%3D&shp=1a13ec60&shcp=-" alt="Profile" class="rounded-full w-full h-full object-cover">
             </div>

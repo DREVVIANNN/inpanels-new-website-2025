@@ -74,3 +74,7 @@ const fadeIn = (id) => {
   btn.addEventListener('click', () => {
     document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
   });
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
